@@ -3,18 +3,18 @@ import React from "react";
 import { cn } from "@/lib/utils";
 // import Link, { type LinkProps } from "next/link";
 
-type AnimatedLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+type AnimatedButtonLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: React.ReactNode;
   className?: string;
   innerClassName?: string;
 };
 
-export default function AnimatedLink({
+export default function AnimatedButtonLink({
   children,
   className,
   innerClassName,
   ...props
-}: AnimatedLinkProps) {
+}: AnimatedButtonLinkProps) {
   return (
     <a
       className={cn("cursor-pointer rounded-sm bg-green text-green", className)}

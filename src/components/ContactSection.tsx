@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import AnimatedLink from "./AnimatedLink";
+import AnimatedButtonLink from "./AnimatedButtonLink";
 
 export default function ContactSection() {
   const initialDelay = 0.25;
@@ -48,13 +48,13 @@ export default function ContactSection() {
           transition={{ duration: 0.5, delay: initialDelay + nextDelay * 3 }}
           viewport={{ once: true }}
         >
-          <AnimatedLink
+          <AnimatedButtonLink
             href="mailto:Mukund Mittal <mukund.mukulmittal@gmail.com>"
             className="w-fit rounded-md"
             innerClassName="bg-navy rounded-md px-5 py-3.5"
           >
             Say Hello!
-          </AnimatedLink>
+          </AnimatedButtonLink>
         </motion.div>
       </div>
     </section>

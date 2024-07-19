@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import { LinksData } from "./LeftVerticalDiv";
+import UnderlineAnimatedLink from "./UnderlineAnimatedLink";
 
 export default function Footer() {
   return (
@@ -33,55 +34,50 @@ export default function Footer() {
       <div className="mt-2 text-center text-sm text-slate">
         <p>
           Design inspired by{" "}
-          <Link
+          <UnderlineAnimatedLink
             href="https://github.com/bchiang7/v4"
             target="_blank"
             rel="noreferrer"
-            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
           >
             Brittany Chiang&apos;s Portfolio v4
-          </Link>
+          </UnderlineAnimatedLink>
         </p>
         <p>
           Created using{" "}
-          <Link
+          <UnderlineAnimatedLink
             href="https://nextjs.org/"
             target="_blank"
             rel="noreferrer"
-            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
           >
             Next.js
-          </Link>
+          </UnderlineAnimatedLink>
           ,{" "}
-          <Link
+          <UnderlineAnimatedLink
             href="https://tailwindcss.com/"
             target="_blank"
             rel="noreferrer"
-            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
           >
             Tailwind CSS
-          </Link>
+          </UnderlineAnimatedLink>
           , and{" "}
-          <Link
+          <UnderlineAnimatedLink
             href="https://www.framer.com/motion/"
             target="_blank"
             rel="noreferrer"
-            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
           >
             Framer Motion
-          </Link>
+          </UnderlineAnimatedLink>
           .
         </p>
         <p>
           Coded with ❤️ by{" "}
-          <Link
+          <UnderlineAnimatedLink
             href="https://github.com/mukund1606"
             target="_blank"
             rel="noreferrer"
-            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
           >
             Mukund Mittal
-          </Link>
+          </UnderlineAnimatedLink>
         </p>
       </div>
     </footer>

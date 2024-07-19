@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import AnimatedLink from "./AnimatedLink";
+import AnimatedButtonLink from "./AnimatedButtonLink";
+import UnderlineAnimatedLink from "./UnderlineAnimatedLink";
 
 export default function HomeSection() {
   const initialDelay = 0.25;
@@ -52,14 +52,13 @@ export default function HomeSection() {
           I&apos;m a full stack web developer and python developer who likes to
           build things for the web. I also love to learn new things and try them
           out. I&apos;m currently learning Game Development using{" "}
-          <Link
+          <UnderlineAnimatedLink
             href="https://godotengine.org/"
-            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
             target="_blank"
             rel="noreferrer"
           >
             Godot Engine.
-          </Link>
+          </UnderlineAnimatedLink>
         </motion.p>
         <motion.div
           className="w-fit rounded-md bg-green"
@@ -68,13 +67,13 @@ export default function HomeSection() {
           transition={{ duration: 0.5, delay: initialDelay + nextDelay * 4 }}
           viewport={{ once: true }}
         >
-          <AnimatedLink
+          <AnimatedButtonLink
             href="#projects"
             className="w-fit rounded-md"
             innerClassName="bg-navy rounded-md px-5 py-3.5 text-base"
           >
             Check out my work
-          </AnimatedLink>
+          </AnimatedButtonLink>
         </motion.div>
       </div>
     </section>

@@ -8,7 +8,7 @@ import {
   useScroll,
 } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import AnimatedLink from "../AnimatedLink";
+import AnimatedButtonLink from "../AnimatedButtonLink";
 import Logo from "../Logo";
 
 const NavData = [
@@ -180,7 +180,7 @@ export default function Navbar() {
               );
             })}
           </ol>
-          <AnimatedLink href="/resume.pdf">Resume</AnimatedLink>
+          <AnimatedButtonLink href="/resume.pdf">Resume</AnimatedButtonLink>
         </div>
       </nav>
       <AnimatePresence>
@@ -250,13 +250,13 @@ export default function Navbar() {
                   );
                 })}
               </ol>
-              <AnimatedLink
+              <AnimatedButtonLink
                 href="/resume.pdf"
                 className="mobile-nav-item rounded-md"
                 innerClassName="bg-light-navy rounded-md px-10 py-4 text-base"
               >
                 Resume
-              </AnimatedLink>
+              </AnimatedButtonLink>
             </div>
           </motion.aside>
         )}

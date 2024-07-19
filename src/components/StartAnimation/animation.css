@@ -2,45 +2,23 @@
   --text-color: #64ffda;
 }
 
-#logo {
-  animation: fill 0.8s ease forwards 2.7s;
-}
+/* l1: 11656.0234375
+   l2: 8476.0615234375
+*/
 
-#logo path:nth-child(1) {
+#logo path {
   stroke: var(--text-color);
-  stroke-dasharray: 1129.6129150390625;
-  stroke-dashoffset: 1129.6129150390625;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 11656.0234375;
+  stroke-dashoffset: 11656.0234375;
+  animation: line-anim 1.5s ease forwards;
 }
-#logo path:nth-child(2) {
+#logo polygon {
   stroke: var(--text-color);
-  stroke-dasharray: 673.5794677734375;
-  stroke-dashoffset: 673.5794677734375;
-  animation: line-anim 2s ease forwards 0.3s;
-}
-#logo path:nth-child(3) {
-  stroke: var(--text-color);
-  stroke-dasharray: 814.8848876953125;
-  stroke-dashoffset: 814.8848876953125;
-  animation: line-anim 2s ease forwards 0.6s;
-}
-#logo path:nth-child(4) {
-  stroke: var(--text-color);
-  stroke-dasharray: 673.5791625976562;
-  stroke-dashoffset: 673.5791625976562;
-  animation: line-anim 2s ease forwards 0.9s;
-}
-#logo path:nth-child(5) {
-  stroke: var(--text-color);
-  stroke-dasharray: 673.5772705078125;
-  stroke-dashoffset: 673.5772705078125;
-  animation: line-anim 2s ease forwards 1.2s;
-}
-#logo path:nth-child(6) {
-  stroke: var(--text-color);
-  stroke-dasharray: 835.9981079101562;
-  stroke-dashoffset: 835.9981079101562;
-  animation: line-anim 2s ease forwards 1.5s;
+  stroke-dasharray: 8476.0615234375;
+  stroke-dashoffset: 8476.0615234375;
+  animation:
+    line-anim 1.5s ease forwards 1.5s,
+    fill-anim 1.5s ease forwards 3s;
 }
 
 @keyframes line-anim {
@@ -48,7 +26,7 @@
     stroke-dashoffset: 0;
   }
 }
-@keyframes fill {
+@keyframes fill-anim {
   from {
     fill: transparent;
   }
@@ -58,11 +36,11 @@
 }
 
 .upperPart {
-  animation: upperPart 1s ease forwards 4s;
+  animation: upperPart 1s ease forwards 3.75s;
 }
 
 .lowerPart {
-  animation: lowerPart 1s ease forwards 4s;
+  animation: lowerPart 1s ease forwards 3.75s;
 }
 
 @keyframes upperPart {
@@ -86,7 +64,7 @@
 }
 
 .mainStart {
-  animation: mainStart 1s ease forwards 4.1s;
+  animation: mainStart 1s ease forwards 4.2s;
 }
 
 @keyframes mainStart {

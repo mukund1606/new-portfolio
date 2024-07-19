@@ -7,7 +7,6 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import AnimatedLink from "../AnimatedLink";
 import Logo from "../Logo";

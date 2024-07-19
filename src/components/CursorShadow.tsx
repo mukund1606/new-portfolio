@@ -18,7 +18,7 @@ export default function CursorShadow() {
   }, []);
 
   useEffect(() => {
-    if (windowWidth < 1024) {
+    if (windowWidth < 768) {
       return;
     }
     const handleMouseMove = (event: MouseEvent) => {
@@ -33,7 +33,7 @@ export default function CursorShadow() {
 
   return (
     <motion.div
-      className="fixed inset-0 -z-10 h-screen w-screen transition-all duration-500"
+      className="fixed inset-0 -z-10 hidden h-screen w-screen transition-all duration-500 sm:block"
       style={{
         background: `radial-gradient(600px at ${currentPosition.x}px ${currentPosition.y}px, #1d4ed826, transparent 80%)`,
       }}

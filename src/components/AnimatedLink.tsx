@@ -17,12 +17,12 @@ export default function AnimatedLink({
 }: AnimatedLinkProps) {
   return (
     <Link
-      className={cn("cursor-pointer rounded-md bg-green text-green", className)}
+      className={cn("cursor-pointer rounded-sm bg-green text-green", className)}
       {...props}
     >
       <div
         className={cn(
-          "rounded-md border border-green bg-dark-navy px-3 py-2 transition-all duration-500 hover:-translate-x-1 hover:-translate-y-1",
+          "rounded-sm border border-green bg-dark-navy px-3 py-2 transition-all duration-500 hover:-translate-x-1 hover:-translate-y-1",
           innerClassName,
         )}
       >

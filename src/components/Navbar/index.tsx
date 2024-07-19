@@ -39,9 +39,6 @@ export default function Navbar() {
   const { scrollYProgress } = useScroll();
 
   useMotionValueEvent(scrollYProgress, "change", () => {
-    if (isMobileNavOpen) {
-      return;
-    }
     if (scrollYProgress.getVelocity() > 0.6) {
       setIsHidden(true);
     } else if (scrollYProgress.getVelocity() < -0.25) {
@@ -70,6 +67,26 @@ export default function Navbar() {
       document.removeEventListener("click", handleClickOutside);
     };
   }, [isMobileNavOpen]);
+
+  useEffect(() => {
+    if (isMobileNavOpen) {
+      window.document.body.style.overflow = "hidden";
+    } else {
+      window.document.body.style.overflow = "auto";
+    }
+  }, [isMobileNavOpen]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMobileNavOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <motion.header
@@ -150,7 +167,7 @@ export default function Navbar() {
         {isMobileNavOpen && (
           <motion.aside
             id="mobile-nav"
-            className="fixed right-0 top-0 flex h-screen w-[min(75vw,400px)] items-center justify-center bg-light-navy text-green"
+            className="fixed right-0 top-0 flex h-screen w-[min(75vw,400px)] items-center justify-center bg-light-navy text-green md:hidden"
             initial={{ right: "-100vw" }}
             animate={{
               right: 0,
@@ -163,7 +180,7 @@ export default function Navbar() {
             }}
           >
             <div className="flex flex-col items-center gap-y-12 font-mono text-[13px] text-lightest-slate">
-              <ol className="flex w-fit flex-col items-center gap-y-12">
+              <ol className="flex w-fit flex-col items-center gap-y-8">
                 {NavData.map((item, index) => {
                   return (
                     <li
@@ -189,7 +206,7 @@ export default function Navbar() {
               </ol>
               <AnimatedLink
                 href="/resume.pdf"
-                className="w-fit"
+                className="w-fi rounded-md"
                 innerClassName="bg-light-navy rounded-md px-10 py-4 text-base"
               >
                 Resume
@@ -213,8 +230,7 @@ function MobileNavButton({
     <button
       id="mobile-nav-button"
       className={cn(
-        "z-50 flex cursor-pointer flex-col items-end gap-2 rounded-md bg-dark-navy p-2 text-green transition-all duration-100",
-        isMobileNavOpen && "bg-light-navy",
+        "z-50 flex cursor-pointer flex-col items-end gap-2 rounded-md bg-transparent p-2 text-green transition-all duration-100",
       )}
       onClick={() => {
         setIsMobileNavOpen(!isMobileNavOpen);

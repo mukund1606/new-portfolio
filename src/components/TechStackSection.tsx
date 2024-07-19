@@ -34,9 +34,7 @@ export default function TechStackSection() {
           transition={{ duration: 0.5, delay: initialDelay }}
           viewport={{ once: true }}
         >
-          <span className="font-mono text-base leading-snug text-green">
-            02.
-          </span>
+          <span className="font-mono text-base text-green">02.</span>
           <span className="text-lg font-semibold text-lightest-slate">
             My Tech Stack
           </span>

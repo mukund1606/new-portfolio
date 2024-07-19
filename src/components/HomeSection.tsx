@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimatedLink from "./AnimatedLink";
 
 export default function HomeSection() {
-  const initialDelay = 4.5;
+  const initialDelay = 0.25;
   const nextDelay = 0.1;
   return (
     <section
@@ -14,7 +14,7 @@ export default function HomeSection() {
     >
       <div className="my-auto flex flex-col gap-6">
         <motion.span
-          className="font-mono text-base leading-snug text-green"
+          className="font-mono text-base text-green"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: initialDelay }}
@@ -43,7 +43,7 @@ export default function HomeSection() {
           </motion.h3>
         </div>
         <motion.p
-          className="max-w-[540px] leading-snug text-slate"
+          className="max-w-[540px] text-slate"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: initialDelay + nextDelay * 3 }}

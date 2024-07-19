@@ -275,6 +275,7 @@ function MobileNavButton({
   return (
     <button
       id="mobile-nav-button"
+      aria-label="Open Mobile Nav"
       className={cn(
         "flex cursor-pointer flex-col items-end gap-2 rounded-md bg-transparent p-2 text-green transition-all duration-100",
       )}

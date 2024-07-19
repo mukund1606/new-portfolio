@@ -13,16 +13,16 @@ export default function HomeSection() {
       id="home"
     >
       <div className="my-auto flex flex-col gap-6">
-        <motion.span
-          className="font-mono text-base text-green"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: initialDelay }}
-          viewport={{ once: true }}
-        >
-          Hi, my name is
-        </motion.span>
         <div>
+          <motion.span
+            className="font-mono text-base text-green"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: initialDelay }}
+            viewport={{ once: true }}
+          >
+            Hi, my name is
+          </motion.span>
           <motion.h2
             className="text-3xl font-semibold leading-tight text-lightest-slate lg:text-4xl"
             initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ export default function HomeSection() {
           out. I&apos;m currently learning Game Development using{" "}
           <Link
             href="https://godotengine.org/"
-            className="text-green"
+            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
             target="_blank"
             rel="noreferrer"
           >

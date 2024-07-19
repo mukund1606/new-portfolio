@@ -37,7 +37,7 @@ export default function Footer() {
             href="https://github.com/bchiang7/v4"
             target="_blank"
             rel="noreferrer"
-            className="text-green"
+            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
           >
             Brittany Chiang&apos;s Portfolio v4
           </Link>
@@ -48,7 +48,7 @@ export default function Footer() {
             href="https://nextjs.org/"
             target="_blank"
             rel="noreferrer"
-            className="text-green"
+            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
           >
             Next.js
           </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
             href="https://tailwindcss.com/"
             target="_blank"
             rel="noreferrer"
-            className="text-green"
+            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
           >
             Tailwind CSS
           </Link>
@@ -66,7 +66,7 @@ export default function Footer() {
             href="https://www.framer.com/motion/"
             target="_blank"
             rel="noreferrer"
-            className="text-green"
+            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
           >
             Framer Motion
           </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
             href="https://github.com/mukund1606"
             target="_blank"
             rel="noreferrer"
-            className="text-green"
+            className="text-green transition-all duration-300 ease-in-out hover:underline focus:underline"
           >
             Mukund Mittal
           </Link>

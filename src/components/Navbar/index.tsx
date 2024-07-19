@@ -10,7 +10,6 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import AnimatedLink from "../AnimatedLink";
 import Logo from "../Logo";
-import NavbarKeyboardEvent from "./event";
 
 const NavData = [
   {
@@ -88,6 +87,36 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "0") {
+        window.location.href = "#home";
+        setSelected("/");
+        event.preventDefault();
+      } else if (event.key === "1") {
+        window.location.href = "#about";
+        setSelected("#about");
+        event.preventDefault();
+      } else if (event.key === "2") {
+        event.preventDefault();
+        setSelected("#tech-stack");
+        window.location.href = "#tech-stack";
+      } else if (event.key === "3") {
+        event.preventDefault();
+        setSelected("#projects");
+        window.location.href = "#projects";
+      } else if (event.key === "4") {
+        event.preventDefault();
+        setSelected("#contact");
+        window.location.href = "#contact";
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <motion.header
       className={cn(
@@ -108,7 +137,6 @@ export default function Navbar() {
         ease: "easeIn",
       }}
     >
-      <NavbarKeyboardEvent />
       <nav className="flex w-full items-center justify-between">
         <Logo href="#home" onClick={() => setSelected("/")} />
         {/* Mobile Nav */}

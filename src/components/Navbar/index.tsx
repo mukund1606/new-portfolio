@@ -240,13 +240,13 @@ export default function Navbar() {
                         item.href === selected ? "active" : "inactive"
                       }
                     >
-                      <Link href={item.href}>
+                      <a href={item.href}>
                         <span className="text-green">
                           {(index + 1).toString().padStart(2, "0")}.
                         </span>
                         <br />
                         {item.title}
-                      </Link>
+                      </a>
                     </li>
                   );
                 })}

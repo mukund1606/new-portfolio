@@ -5,7 +5,7 @@ import Link from "next/link";
 import AnimatedLink from "./AnimatedLink";
 
 export default function HomeSection() {
-  const initialDelay = 0;
+  const initialDelay = 4.5;
   const nextDelay = 0.1;
   return (
     <section

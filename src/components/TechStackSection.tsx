@@ -64,7 +64,7 @@ export default function TechStackSection() {
                 height={64}
                 src={tech.icon}
                 alt={tech.name}
-                className="h-16 w-16 grayscale transition-all duration-500 hover:grayscale-0"
+                className="h-16 w-16 transition-all duration-500 hover:grayscale-0 lg:grayscale"
               />
               <span className="text-base font-medium text-lightest-slate">
                 {tech.name}

@@ -33,7 +33,7 @@ export const LinksData = [
 ];
 export default function LeftVerticalDiv() {
   return (
-    <div className="fixed bottom-0 left-5 hidden w-10 flex-col items-center justify-between gap-8 md:flex">
+    <div className="fixed bottom-0 left-5 hidden w-10 flex-col items-center justify-between gap-8 md:flex lg:left-10">
       <ol className="flex flex-col items-center justify-center gap-2">
         {LinksData.map((link, index) => (
           <li key={index}>

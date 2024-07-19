@@ -1,9 +1,9 @@
 import React from "react";
 
 import { cn } from "@/lib/utils";
-import Link, { type LinkProps } from "next/link";
+// import Link, { type LinkProps } from "next/link";
 
-type AnimatedLinkProps = LinkProps & {
+type AnimatedLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: React.ReactNode;
   className?: string;
   innerClassName?: string;
@@ -16,7 +16,7 @@ export default function AnimatedLink({
   ...props
 }: AnimatedLinkProps) {
   return (
-    <Link
+    <a
       className={cn("cursor-pointer rounded-sm bg-green text-green", className)}
       {...props}
     >
@@ -28,6 +28,6 @@ export default function AnimatedLink({
       >
         {children}
       </div>
-    </Link>
+    </a>
   );
 }

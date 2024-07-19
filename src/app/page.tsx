@@ -1,26 +1,31 @@
+"use client";
+
+import dynamic from "next/dynamic";
+
+import HomeSection from "@/components/HomeSection";
 import LeftVerticalDiv from "@/components/LeftVerticalDiv";
 import RightVerticalDiv from "@/components/RightVerticalDiv";
-import dynamic from "next/dynamic";
+import TechStackSection from "@/components/TechStackSection";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
 
 export default function HomePage() {
   return (
     <>
-      <Navbar />
       <LeftVerticalDiv />
       <RightVerticalDiv />
       <div id="right"></div>
       <div id="content">
-        <main>
-          <section className="h-screen" id="home"></section>
+        <main className="px-6 sm:px-[50px] md:px-[100px] lg:px-[150px]">
+          <HomeSection />
           <section className="h-screen" id="about"></section>
-          <section className="h-screen" id="tech-stack"></section>
+          <TechStackSection />
           <section className="h-screen" id="projects"></section>
           <section className="h-screen" id="contact"></section>
         </main>
         <footer></footer>
       </div>
+      <Navbar />
     </>
   );
 }

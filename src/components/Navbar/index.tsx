@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "@/lib/utils";
 import {
   AnimatePresence,
@@ -54,7 +55,10 @@ export default function Navbar() {
     const handleClickOutside = (event: MouseEvent) => {
       if (isMobileNavOpen) {
         if (event.target instanceof HTMLElement) {
-          if (!event.target.closest("#mobile-nav")) {
+          if (
+            !event.target.closest("#mobile-nav") ||
+            event.target.closest(".mobile-nav-item")
+          ) {
             setIsMobileNavOpen(false);
           }
         }
@@ -90,25 +94,20 @@ export default function Navbar() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "0") {
-        window.location.href = "#home";
-        setSelected("/");
+        window.location.hash = "#home";
         event.preventDefault();
       } else if (event.key === "1") {
-        window.location.href = "#about";
-        setSelected("#about");
+        window.location.hash = "#about";
         event.preventDefault();
       } else if (event.key === "2") {
         event.preventDefault();
-        setSelected("#tech-stack");
-        window.location.href = "#tech-stack";
+        window.location.hash = "#tech-stack";
       } else if (event.key === "3") {
         event.preventDefault();
-        setSelected("#projects");
-        window.location.href = "#projects";
+        window.location.hash = "#projects";
       } else if (event.key === "4") {
         event.preventDefault();
-        setSelected("#contact");
-        window.location.href = "#contact";
+        window.location.hash = "#contact";
       }
     };
     document.addEventListener("keydown", handleKeyDown);
@@ -117,10 +116,21 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const urlHashChangeHandler = () => {
+      console.log("Hash Changed");
+      setSelected(window.location.hash);
+    };
+    window.addEventListener("hashchange", urlHashChangeHandler);
+    return () => {
+      window.removeEventListener("hashchange", urlHashChangeHandler);
+    };
+  });
+
   return (
     <motion.header
       className={cn(
-        "fixed top-0 flex w-full items-center bg-navy/85 px-6 shadow-sm backdrop-blur-sm transition-all duration-500 ease-in-out md:px-10 lg:px-24",
+        "fixed top-0 flex w-full items-center bg-navy/85 px-6 shadow-sm backdrop-blur-sm transition-all duration-500 ease-in-out md:px-[40px] lg:px-[50px]",
         !isStart && "shadow-md",
         isMobileNavOpen && "bg-transparent shadow-none",
       )}
@@ -138,11 +148,11 @@ export default function Navbar() {
       }}
     >
       <nav className="flex w-full items-center justify-between">
-        <Logo href="#home" onClick={() => setSelected("/")} />
+        <Logo href="#home" />
         {/* Mobile Nav */}
         <div
           className={cn(
-            "absolute right-6 top-4 z-50 md:hidden",
+            "absolute right-6 top-4 z-[999] md:hidden",
             isStart && "top-8",
           )}
         >
@@ -160,16 +170,13 @@ export default function Navbar() {
                   className="transition-all duration-300 ease-in-out data-[state=active]:text-green hover:text-green"
                   key={item.title}
                   data-state={item.href === selected ? "active" : "inactive"}
-                  onClick={() => {
-                    setSelected(item.href);
-                  }}
                 >
-                  <Link href={item.href}>
+                  <a href={item.href}>
                     <span className="pr-1 text-green">
                       {(index + 1).toString().padStart(2, "0")}.
                     </span>
                     {item.title}
-                  </Link>
+                  </a>
                 </li>
               );
             })}
@@ -177,25 +184,40 @@ export default function Navbar() {
           <AnimatedLink href="/resume.pdf">Resume</AnimatedLink>
         </div>
       </nav>
-      <motion.div
-        className="fixed right-0 w-full backdrop-blur-sm"
-        style={{
-          top: isStart ? "100px" : "70px",
-          height: isStart ? "calc(100vh - 100px)" : "calc(100vh - 70px)",
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isMobileNavOpen ? 1 : 0 }}
-        transition={{
-          duration: 0.2,
-          ease: "easeIn",
-        }}
-      />
+      <AnimatePresence>
+        {isMobileNavOpen && (
+          <motion.div
+            className="absolute right-0 w-full backdrop-blur-md"
+            style={{
+              top: isStart ? "100px" : "70px",
+              height: isStart ? "calc(100vh - 100px)" : "calc(100vh - 70px)",
+            }}
+            initial={{
+              opacity: 0,
+              zIndex: -999,
+              backgroundColor: "rgba(0,0,0,0.5)",
+              backdropFilter: "blur(10px)",
+            }}
+            animate={{
+              opacity: isMobileNavOpen ? 1 : 0,
+              zIndex: isMobileNavOpen ? 10 : -999,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.2,
+              ease: "easeIn",
+            }}
+          ></motion.div>
+        )}
+      </AnimatePresence>
       {/*  Start Animation from the right */}
       <AnimatePresence>
         {isMobileNavOpen && (
           <motion.aside
             id="mobile-nav"
-            className="fixed right-0 top-0 flex h-screen w-[min(75vw,400px)] items-center justify-center bg-light-navy text-green md:hidden"
+            className="fixed right-0 top-0 z-[90] flex h-screen w-[min(75vw,400px)] items-center justify-center bg-light-navy text-green md:hidden"
             initial={{ right: "-100vw" }}
             animate={{
               right: 0,
@@ -212,14 +234,11 @@ export default function Navbar() {
                 {NavData.map((item, index) => {
                   return (
                     <li
-                      className="text-center text-base transition-all duration-300 ease-in-out data-[state=active]:text-green hover:text-green"
+                      className="mobile-nav-item text-center text-base transition-all duration-300 ease-in-out data-[state=active]:text-green hover:text-green"
                       key={item.title}
                       data-state={
                         item.href === selected ? "active" : "inactive"
                       }
-                      onClick={() => {
-                        setSelected(item.href);
-                      }}
                     >
                       <Link href={item.href}>
                         <span className="text-green">
@@ -234,7 +253,7 @@ export default function Navbar() {
               </ol>
               <AnimatedLink
                 href="/resume.pdf"
-                className="w-fi rounded-md"
+                className="mobile-nav-item rounded-md"
                 innerClassName="bg-light-navy rounded-md px-10 py-4 text-base"
               >
                 Resume
@@ -258,7 +277,7 @@ function MobileNavButton({
     <button
       id="mobile-nav-button"
       className={cn(
-        "z-50 flex cursor-pointer flex-col items-end gap-2 rounded-md bg-transparent p-2 text-green transition-all duration-100",
+        "flex cursor-pointer flex-col items-end gap-2 rounded-md bg-transparent p-2 text-green transition-all duration-100",
       )}
       onClick={() => {
         setIsMobileNavOpen(!isMobileNavOpen);

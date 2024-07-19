@@ -23,7 +23,7 @@ export default function TechStackSection() {
   const nextDelay = 0.1;
   return (
     <section
-      className="mx-auto flex min-h-[75vh] w-full max-w-[800px] justify-center py-16 pt-20"
+      className="mx-auto flex min-h-[75vh] w-full max-w-[1000px] justify-center py-16 pt-20"
       id="tech-stack"
     >
       <div className="my-auto flex w-full flex-col gap-6">

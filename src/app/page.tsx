@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import HomeSection from "@/components/HomeSection";
 import LeftVerticalDiv from "@/components/LeftVerticalDiv";
+import ProjectsSection from "@/components/ProjectsSection";
 import RightVerticalDiv from "@/components/RightVerticalDiv";
 import TechStackSection from "@/components/TechStackSection";
 
@@ -23,7 +24,7 @@ export default function HomePage() {
           <HomeSection />
           <AboutSection />
           <TechStackSection />
-          {/* <section className="h-screen" id="projects"></section> */}
+          <ProjectsSection />
           <ContactSection />
         </main>
         <Footer />

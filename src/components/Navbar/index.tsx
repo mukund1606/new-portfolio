@@ -117,7 +117,6 @@ export default function Navbar() {
 
   useEffect(() => {
     const urlHashChangeHandler = () => {
-      console.log("Hash Changed");
       setSelected(window.location.hash);
     };
     window.addEventListener("hashchange", urlHashChangeHandler);
@@ -129,7 +128,7 @@ export default function Navbar() {
   return (
     <motion.header
       className={cn(
-        "fixed top-0 flex w-full items-center bg-navy/85 px-6 shadow-sm backdrop-blur-sm transition-all duration-500 ease-in-out md:px-[40px] lg:px-[50px]",
+        "fixed top-0 z-10 flex w-full items-center bg-navy/85 px-6 shadow-sm backdrop-blur-sm transition-all duration-500 ease-in-out md:px-[40px] lg:px-[50px]",
         !isStart && "shadow-md",
         isMobileNavOpen && "bg-transparent shadow-none",
       )}

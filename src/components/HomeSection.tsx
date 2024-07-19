@@ -49,9 +49,10 @@ export default function HomeSection() {
           transition={{ duration: 0.5, delay: initialDelay + nextDelay * 3 }}
           viewport={{ once: true }}
         >
-          I&apos;m a full stack web developer and python developer who likes to
-          build things for the web. I also love to learn new things and try them
-          out. I&apos;m currently learning Game Development using{" "}
+          I&apos;m a full-stack web developer and Python developer who loves to
+          build things for the web. I enjoy learning new things and
+          experimenting with them. Currently, I&apos;m diving into Game
+          Development using the{" "}
           <UnderlineAnimatedLink
             href="https://godotengine.org/"
             target="_blank"

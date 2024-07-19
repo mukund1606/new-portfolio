@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 
+import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import HomeSection from "@/components/HomeSection";
@@ -20,9 +21,9 @@ export default function HomePage() {
       <div id="content">
         <main className="px-6 sm:px-[50px] md:px-[100px] lg:px-[150px]">
           <HomeSection />
-          <section className="h-screen" id="about"></section>
+          <AboutSection />
           <TechStackSection />
-          <section className="h-screen" id="projects"></section>
+          {/* <section className="h-screen" id="projects"></section> */}
           <ContactSection />
         </main>
         <Footer />

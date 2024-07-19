@@ -37,9 +37,11 @@ export default function ContactSection() {
           transition={{ duration: 0.5, delay: initialDelay + nextDelay * 2 }}
           viewport={{ once: true }}
         >
-          Although I&apos;m not currently looking for any new opportunities, my
-          inbox is always open. Whether you have a question or just want to say
-          hi, I&apos;ll try my best to get back to you!
+          I&apos;m actively seeking new opportunities related to web development
+          and always eager to connect with like-minded individuals. Whether you
+          have a question, need some advice, or just want to say hi, my inbox is
+          always open. Feel free to reach out, and I&apos;ll get back to you as
+          soon as I can!
         </motion.p>
         <motion.div
           className="mx-auto mt-4 w-fit rounded-md bg-green"

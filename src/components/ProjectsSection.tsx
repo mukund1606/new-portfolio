@@ -155,14 +155,24 @@ function FeaturedProjectCard({
             <li>
               {data.link &&
                 (data.link.includes("github") ? (
-                  <a href={data.link} target="_blank" rel="noreferrer">
+                  <a
+                    href={data.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Github Link"
+                  >
                     <GithubLogo
                       className="h-5 w-5 text-light-slate transition-all duration-300 hover:text-green"
                       strokeWidth={1.5}
                     />
                   </a>
                 ) : (
-                  <a href={data.link} target="_blank" rel="noreferrer">
+                  <a
+                    href={data.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="External Link"
+                  >
                     <ExternalLink
                       className="h-6 w-5 text-light-slate transition-all duration-300 hover:text-green"
                       strokeWidth={1.5}
@@ -172,7 +182,12 @@ function FeaturedProjectCard({
             </li>
             {data.youtubeVideo && (
               <li>
-                <a href={data.youtubeVideo} target="_blank" rel="noreferrer">
+                <a
+                  href={data.youtubeVideo}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Youtube Link"
+                >
                   <YoutubeLogo className="h-6 text-light-slate transition-all duration-300 hover:text-green" />
                 </a>
               </li>
@@ -192,11 +207,21 @@ function ProjectCard({ data }: { data: ProjectDataType }) {
           <Folder className="h-10 w-10 text-green" />
           {data.link &&
             (data.link.includes("github") ? (
-              <a href={data.link} target="_blank" rel="noreferrer">
+              <a
+                href={data.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Github Link"
+              >
                 <GithubLogo className="h-6 w-6 text-light-slate transition-all duration-300 hover:text-green" />
               </a>
             ) : (
-              <a href={data.link} target="_blank" rel="noreferrer">
+              <a
+                href={data.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="External Link"
+              >
                 <ExternalLink className="h-6 w-6 text-light-slate transition-all duration-300 hover:text-green" />
               </a>
             ))}

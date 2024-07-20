@@ -118,7 +118,7 @@ export default function AboutSection() {
                 height={400}
                 width={400}
                 alt="Mukund Mittal"
-                className="rounded-md grayscale transition-all duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:grayscale-0"
+                className="rounded-md transition-all duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:grayscale-0 lg:grayscale"
               />
               <div className="absolute -bottom-2 -right-2 -z-10 h-full w-full rounded-md border-2 border-green transition-all duration-500 group-hover:-bottom-3 group-hover:-right-3" />
             </div>

@@ -16,12 +16,12 @@ export const projectsData: ProjectDataType[] = [
   {
     title: "Bright Pathways",
     description:
-      "Bright Pathways is a comprehensive platform designed to help individuals, especially senior citizens, find essential services like old age care, animal shelters, and adoption centers. The project features a responsive website built with Next.js and Tailwind CSS and a mobile app developed in Kotlin, both supported by Firebase and 'God Speed' for robust backend services.",
+      "Bright Pathways is a comprehensive platform designed to help individuals, especially senior citizens, find essential services like old age care, animal shelters, and adoption centers. The project features a responsive website built with Next.js and Tailwind CSS and a mobile app developed in Kotlin, both supported by Firebase and 'GodSpeed' for robust backend services.",
     date: "29-10-2023",
     link: "https://github.com/mukund1606/bright-pathways",
     images: ["/projects/bright-pathways.png"],
     isFeatured: true,
-    techStack: ["Next.js", "Tailwind CSS", "God Speed", "Firebase"],
+    techStack: ["Next.js", "Tailwind CSS", "Firebase"],
   },
   {
     title: "ASLYF",

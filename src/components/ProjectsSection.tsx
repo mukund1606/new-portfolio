@@ -8,9 +8,7 @@ import GithubLogo from "./Logos/Github";
 export default function ProjectsSection() {
   const initialDelay = 0.25;
   const nextDelay = 0.1;
-  const totalProjects = projectsData.length;
   const feturedProjects = projectsData.filter((project) => project.isFeatured);
-  const totalFeturedProjects = feturedProjects.length;
   const nonFeaturedProjects = projectsData.filter(
     (project) => !project.isFeatured,
   );
@@ -62,9 +60,7 @@ export default function ProjectsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.5,
-                  delay:
-                    initialDelay +
-                    nextDelay * (index + 1 + totalFeturedProjects),
+                  delay: initialDelay + nextDelay * (index + 1),
                 }}
                 viewport={{ once: true }}
               >

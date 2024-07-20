@@ -4,34 +4,21 @@ export const projectsData: ProjectDataType[] = [
     description:
       "SSA Portal is a comprehensive Web ERP system for managing inventory, students, staff, and courses. It includes abacus tools and practice features for students. Built with React, Next.js, and MySQL, the project is designed for scalability and maintainability.",
     date: "07-03-2024 - Present",
-    images: [
-      "/projects/ssa-1.png",
-      "/projects/ssa-2.png",
-      "/projects/ssa-3.png",
-      "/projects/ssa-4.png",
-    ],
+    images: ["/projects/ssa-2.png"],
     isFeatured: true,
     techStack: ["React", "Next.js", "MySQL"],
   },
   {
-    title: "Bright Pathways",
+    title: "Lo-Fi nance Band",
     description:
-      "Bright Pathways is a comprehensive platform designed to help individuals, especially senior citizens, find essential services like old age care, animal shelters, and adoption centers. The project features a responsive website built with Next.js and Tailwind CSS and a mobile app developed in Kotlin, both supported by Firebase and 'GodSpeed' for robust backend services.",
-    date: "29-10-2023",
-    link: "https://github.com/mukund1606/bright-pathways",
-    images: ["/projects/bright-pathways.png"],
+      "Lo-Fi nance Band is a web app that enables users to play virtual music instruments, compose tracks, and explore creative expression through a virtual painter. Inspired by the challenges of affording physical instruments, this platform promotes affordable and accessible musical creativity.",
+    date: "24-07-2023",
+    link: "https://devpost.com/software/lo-fi-nance-band",
+    images: ["/projects/lo-fi-nance-band.jpg"],
     isFeatured: true,
-    techStack: ["Next.js", "Tailwind CSS", "Firebase"],
-  },
-  {
-    title: "ASLYF",
-    description:
-      "Aslyf bridges communication gaps by transforming ideas into American Sign Language (ASL). This platform offers features like text-to-ASL conversion, video-to-text transcription, and text-to-audio conversion, empowering users to learn and communicate using ASL. Future updates will include ASL-to-text conversion for real-time translation. Join us in fostering inclusivity and breaking communication barriers.",
-    date: "14-08-2023",
-    link: "https://github.com/mukund1606/aslyf-project",
-    images: ["/projects/aslyf.png"],
-    isFeatured: true,
-    techStack: ["Next.js", "Tailwind CSS", "Web Speech API"],
+    techStack: ["Python", "OpenCV", "Streamlit"],
+    youtubeVideo:
+      "https://www.youtube.com/embed/CFP9hNUwwUE?si=Qyou1gTa811KFZOZ",
   },
   {
     title: "Python TTS Server",
@@ -44,14 +31,24 @@ export const projectsData: ProjectDataType[] = [
     techStack: ["Python", "FastAPI", "Redis"],
   },
   {
-    title: "Lo-Fi nance Band",
+    title: "Bright Pathways",
     description:
-      "Lo-Fi nance Band is a web app that enables users to play virtual music instruments, compose tracks, and explore creative expression through a virtual painter. Inspired by the challenges of affording physical instruments, this platform promotes affordable and accessible musical creativity. Built with OpenCV, Python, Pygame, Streamlit, HTML5, CSS3, and JavaScript, it offers a seamless, user-friendly experience.",
-    date: "24-07-2023",
-    link: "https://devpost.com/software/lo-fi-nance-band",
-    images: [],
+      "Bright Pathways is a comprehensive platform designed to help individuals, especially senior citizens, find essential services like old age care, animal shelters, and adoption centers. The project features a responsive website built with Next.js and Tailwind CSS and a mobile app developed in Kotlin, both supported by Firebase and 'GodSpeed' for robust backend services.",
+    date: "29-10-2023",
+    link: "https://github.com/mukund1606/bright-pathways",
+    images: ["/projects/bright-pathways.png"],
     isFeatured: false,
-    techStack: ["Python", "OpenCV", "Pygame", "Streamlit"],
+    techStack: ["Next.js", "Tailwind CSS", "Firebase"],
+  },
+  {
+    title: "ASLYF",
+    description:
+      "Aslyf bridges communication gaps by transforming ideas into American Sign Language (ASL). This platform offers features like text-to-ASL conversion, video-to-text transcription, and text-to-audio conversion, empowering users to learn and communicate using ASL. Future updates will include ASL-to-text conversion for real-time translation. Join us in fostering inclusivity and breaking communication barriers.",
+    date: "14-08-2023",
+    link: "https://github.com/mukund1606/aslyf-project",
+    images: ["/projects/aslyf.png"],
+    isFeatured: false,
+    techStack: ["Next.js", "Tailwind CSS", "Web Speech API"],
   },
   {
     title: "Cricbuzz Web Scraper",
@@ -91,6 +88,7 @@ export type ProjectDataType = {
   date: string;
   link?: string;
   images: string[];
+  youtubeVideo?: string;
   isFeatured: boolean;
   techStack: string[];
 };

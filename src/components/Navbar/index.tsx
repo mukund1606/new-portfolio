@@ -179,7 +179,9 @@ export default function Navbar() {
               );
             })}
           </ol>
-          <AnimatedButtonLink href="/resume.pdf">Resume</AnimatedButtonLink>
+          <AnimatedButtonLink href="/resume.pdf" target="_blank">
+            Resume
+          </AnimatedButtonLink>
         </div>
       </nav>
       <AnimatePresence>

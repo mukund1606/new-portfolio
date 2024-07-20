@@ -34,11 +34,13 @@ export default function TechStackSection() {
           transition={{ duration: 0.5, delay: initialDelay }}
           viewport={{ once: true }}
         >
-          <span className="font-mono text-base text-green">02.</span>
-          <span className="text-lg font-semibold text-lightest-slate">
-            My Tech Stack
-          </span>
-          <span className="ml-1 h-[2px] w-1/3 rounded-md bg-lightest-navy sm:ml-4 sm:w-1/2 lg:w-2/3" />
+          <div className="flex min-w-fit items-center gap-2">
+            <span className="font-mono text-base text-green">02.</span>
+            <span className="text-lg font-semibold text-lightest-slate">
+              My Tech Stack
+            </span>
+          </div>
+          <span className="mx-1 h-[2px] w-full rounded-md bg-lightest-navy sm:mx-4" />
         </motion.div>
         <motion.div
           className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4"

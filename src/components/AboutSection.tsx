@@ -20,11 +20,13 @@ export default function AboutSection() {
           transition={{ duration: 0.5, delay: initialDelay }}
           viewport={{ once: true }}
         >
-          <span className="font-mono text-base text-green">01.</span>
-          <span className="text-lg font-semibold text-lightest-slate">
-            About Me
-          </span>
-          <span className="ml-1 h-[2px] w-1/3 rounded-md bg-lightest-navy" />
+          <div className="flex min-w-fit items-center gap-2">
+            <span className="font-mono text-base text-green">01.</span>
+            <span className="text-lg font-semibold text-lightest-slate">
+              About Me
+            </span>
+          </div>
+          <span className="mx-1 h-[2px] w-full rounded-md bg-lightest-navy sm:mx-4" />
         </motion.div>
         <div className="flex flex-col gap-8 md:flex-row">
           <div className="flex flex-col gap-4">
@@ -112,11 +114,11 @@ export default function AboutSection() {
             <div className="group relative h-fit max-w-[300px] rounded-md">
               <div className="absolute inset-0 z-[1] hidden h-full w-full rounded-md bg-green/40 transition-all duration-500 group-hover:bg-transparent lg:block" />
               <Image
-                src="/me.jpg"
+                src="/me.png"
                 height={400}
                 width={400}
                 alt="Mukund Mittal"
-                className="rounded-md transition-all duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2"
+                className="rounded-md grayscale transition-all duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:grayscale-0"
               />
               <div className="absolute -bottom-2 -right-2 -z-10 h-full w-full rounded-md border-2 border-green transition-all duration-500 group-hover:-bottom-3 group-hover:-right-3" />
             </div>

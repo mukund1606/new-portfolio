@@ -40,7 +40,7 @@ export default function Navbar() {
   useMotionValueEvent(scrollYProgress, "change", () => {
     if (scrollYProgress.getVelocity() > 0.6) {
       setIsHidden(true);
-    } else if (scrollYProgress.getVelocity() < -0.25) {
+    } else if (scrollYProgress.getVelocity() < -0.15) {
       setIsHidden(false);
     }
     if (scrollYProgress.get() === 0) {
@@ -141,7 +141,7 @@ export default function Navbar() {
         height: isStart ? "100px" : "70px",
       }}
       transition={{
-        duration: 0.2,
+        duration: 0.1,
         ease: "easeIn",
       }}
     >

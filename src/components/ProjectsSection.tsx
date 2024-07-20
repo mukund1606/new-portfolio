@@ -34,7 +34,7 @@ export default function ProjectsSection() {
           <span className="mx-1 h-[2px] w-full rounded-md bg-lightest-navy sm:mx-4" />
         </motion.div>
         <div className="flex flex-col gap-8 text-center">
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8 lg:grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
+          {/* <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8 lg:grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
             {feturedProjects.map((project, index) => (
               <motion.div
                 key={`${project.title}-${index}`}
@@ -50,23 +50,25 @@ export default function ProjectsSection() {
                 <ProjectCard data={project} />
               </motion.div>
             ))}
-          </div>
+          </div> */}
           <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8 lg:grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
-            {nonFeaturedProjects.map((project, index) => (
-              <motion.div
-                key={`${project.title}-${index}`}
-                className="flex flex-col"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: initialDelay + nextDelay * (index + 1),
-                }}
-                viewport={{ once: true }}
-              >
-                <ProjectCard data={project} />
-              </motion.div>
-            ))}
+            {[...feturedProjects, ...nonFeaturedProjects].map(
+              (project, index) => (
+                <motion.div
+                  key={`${project.title}-${index}`}
+                  className="flex flex-col"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: initialDelay + nextDelay * (index + 1),
+                  }}
+                  viewport={{ once: true }}
+                >
+                  <ProjectCard data={project} />
+                </motion.div>
+              ),
+            )}
           </div>
         </div>
       </div>
@@ -95,11 +97,16 @@ function ProjectCard({ data }: { data: ProjectDataType }) {
               </a>
             ))}
         </div>
-        <h2 className="mb-2 text-base font-bold text-lightest-slate transition-all duration-300 group-hover:text-green">
-          {data.title}
-        </h2>
+        <div className="mb-2 -space-y-1">
+          <h2 className="font-mono text-base font-bold text-lightest-slate transition-all duration-300 group-hover:text-green">
+            {data.title}
+          </h2>
+          <p className="font-mono text-sm font-semibold text-slate/50">
+            {data.date}
+          </p>
+        </div>
         <div className="group/desc">
-          <p className="text-sm text-light-slate">
+          <p className="text-light-slate">
             {data.description.length > 150
               ? data.description.slice(0, 150) + "..."
               : data.description}
@@ -107,7 +114,7 @@ function ProjectCard({ data }: { data: ProjectDataType }) {
           {/* Description Card */}
           {data.description.length > 150 && (
             <div className="absolute left-0 right-0 top-0 min-h-full origin-top scale-y-0 rounded-md bg-light-navy px-7 py-8 text-left shadow-sm shadow-navy-shadow transition-all duration-500 group-hover/desc:scale-y-100">
-              <p className="text-sm text-light-slate">{data.description}</p>
+              <p className="text-light-slate">{data.description}</p>
             </div>
           )}
         </div>

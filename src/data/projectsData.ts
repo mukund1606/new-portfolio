@@ -1,9 +1,9 @@
 export const projectsData: ProjectDataType[] = [
   {
-    title: "SSA Portal",
+    title: "SSA Web Portal",
     description:
       "SSA Portal is a comprehensive Web ERP system for managing inventory, students, staff, and courses. It includes abacus tools and practice features for students. Built with React, Next.js, and MySQL, the project is designed for scalability and maintainability.",
-    date: "07-03-2024 to Present",
+    date: "07-03-2024 - Present",
     images: [
       "/projects/ssa-1.png",
       "/projects/ssa-2.png",
@@ -34,16 +34,6 @@ export const projectsData: ProjectDataType[] = [
     techStack: ["Next.js", "Tailwind CSS", "Web Speech API"],
   },
   {
-    title: "AWC Website",
-    description:
-      "AcchaWalaCollege is a platform for students to find the best colleges in India, offering reviews, rankings, and admission guidance. I developed the initial basic, responsive frontend for their website, enhancing user experience and accessibility.",
-    date: "15-05-2023",
-    link: "https://github.com/mukund1606/awc-website",
-    images: [],
-    isFeatured: false,
-    techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
-  },
-  {
     title: "Python TTS Server",
     description:
       "A simple Python FastAPI server that provides WAV and base64 audio for given text using Microsoft Speech Platform Runtime (Version 11) in wine. This server allows developers to build and deploy Text-to-Speech applications efficiently. It also integrates Redis for caching, ensuring lightning-fast responses.",
@@ -52,6 +42,16 @@ export const projectsData: ProjectDataType[] = [
     images: [],
     isFeatured: false,
     techStack: ["Python", "FastAPI", "Redis"],
+  },
+  {
+    title: "Lo-Fi nance Band",
+    description:
+      "Lo-Fi nance Band is a web app that enables users to play virtual music instruments, compose tracks, and explore creative expression through a virtual painter. Inspired by the challenges of affording physical instruments, this platform promotes affordable and accessible musical creativity. Built with OpenCV, Python, Pygame, Streamlit, HTML5, CSS3, and JavaScript, it offers a seamless, user-friendly experience.",
+    date: "24-07-2023",
+    link: "https://devpost.com/software/lo-fi-nance-band",
+    images: [],
+    isFeatured: false,
+    techStack: ["Python", "OpenCV", "Pygame", "Streamlit"],
   },
   {
     title: "Cricbuzz Web Scraper",
@@ -72,6 +72,16 @@ export const projectsData: ProjectDataType[] = [
     images: [],
     isFeatured: false,
     techStack: ["Python", "BeautifulSoup", "Selenium"],
+  },
+  {
+    title: "AWC Website",
+    description:
+      "AcchaWalaCollege is a platform for students to find the best colleges in India, offering reviews, rankings, and admission guidance. I developed the initial basic, responsive frontend for their website, enhancing user experience and accessibility.",
+    date: "15-05-2023",
+    link: "https://github.com/mukund1606/awc-website",
+    images: [],
+    isFeatured: false,
+    techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
   },
 ];
 

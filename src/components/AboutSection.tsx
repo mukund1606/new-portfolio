@@ -112,13 +112,13 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <div className="group relative h-fit max-w-[300px] rounded-md">
-              <div className="absolute inset-0 z-[1] hidden h-full w-full rounded-md bg-green/40 transition-all duration-500 group-hover:bg-transparent lg:block" />
+              <div className="absolute inset-0 z-[1] hidden h-full w-full rounded-md bg-green/20 transition-all duration-500 group-hover:bg-transparent lg:block" />
               <Image
                 src="/me.png"
                 height={400}
                 width={400}
                 alt="Mukund Mittal"
-                className="rounded-md transition-all duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:grayscale-0 lg:grayscale"
+                className="rounded-md transition-all duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:saturate-100 lg:saturate-[.25]"
               />
               <div className="absolute -bottom-2 -right-2 -z-10 h-full w-full rounded-md border-2 border-green transition-all duration-500 group-hover:-bottom-3 group-hover:-right-3" />
             </div>

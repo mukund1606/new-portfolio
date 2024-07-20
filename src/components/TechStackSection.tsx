@@ -20,7 +20,7 @@ const TechStack = [
 
 export default function TechStackSection() {
   const initialDelay = 0.25;
-  const nextDelay = 0.1;
+  const nextDelay = 0.05;
   return (
     <section
       className="mx-auto flex min-h-[75vh] w-full max-w-[1000px] justify-center py-16 pt-20"
@@ -56,7 +56,7 @@ export default function TechStackSection() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.5,
+                duration: 0.4,
                 delay: initialDelay + nextDelay * (index + 1),
               }}
               viewport={{ once: true }}
@@ -66,7 +66,7 @@ export default function TechStackSection() {
                 height={64}
                 src={tech.icon}
                 alt={tech.name}
-                className="h-16 w-16 transition-all duration-500 hover:grayscale-0 lg:grayscale"
+                className="h-16 w-16 transition-all duration-300 hover:scale-110 hover:saturate-150 lg:saturate-50"
               />
               <span className="text-base font-medium text-lightest-slate">
                 {tech.name}

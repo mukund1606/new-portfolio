@@ -105,13 +105,13 @@ function FeaturedProjectCard({
             : "col-start-1 -col-end-1 md:col-end-8",
         )}
       >
-        <div className="flex h-full w-full hover:grayscale-0 md:grayscale">
+        <div className="flex h-full w-full hover:saturate-150 md:saturate-50">
           {data.images.map((image, index) => (
             <Image
               key={index}
               src={image}
               alt={data.title}
-              className="aspect-[16/10] h-full w-full rounded-md object-cover brightness-[.25] transition-all duration-300 hover:grayscale-0 md:brightness-100 md:grayscale"
+              className="aspect-[16/10] h-full w-full rounded-md object-cover brightness-[.25] transition-all duration-300 hover:scale-105 md:brightness-100"
               width={600}
               height={375}
             />

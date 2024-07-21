@@ -69,6 +69,27 @@ export default function RootLayout({
           href="/favicon/favicon-16x16.png"
         />
         <meta property="twitter:url" content="https://www.mukund.page" />
+        <link
+          rel="preload"
+          href="/fonts/Inter-var.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/SpaceMono-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/SpaceMono-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="h-full bg-navy">
         {children}

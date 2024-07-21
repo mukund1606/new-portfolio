@@ -117,7 +117,7 @@ export default function AboutSection() {
                 src="/me.png"
                 height={300}
                 width={300}
-                sizes="300px"
+                sizes="(max-width: 768px) 300px, 300px"
                 alt="Mukund Mittal"
                 className="rounded-md transition-all duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:saturate-100 lg:saturate-[.25]"
               />

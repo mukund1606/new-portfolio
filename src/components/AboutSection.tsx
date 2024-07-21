@@ -115,8 +115,9 @@ export default function AboutSection() {
               <div className="absolute inset-0 z-[1] hidden h-full w-full rounded-md bg-green/20 transition-all duration-500 group-hover:bg-transparent lg:block" />
               <Image
                 src="/me.png"
-                height={400}
-                width={400}
+                height={300}
+                width={300}
+                sizes="300px"
                 alt="Mukund Mittal"
                 className="rounded-md transition-all duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:saturate-100 lg:saturate-[.25]"
               />

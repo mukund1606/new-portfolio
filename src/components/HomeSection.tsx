@@ -5,7 +5,7 @@ import AnimatedButtonLink from "./AnimatedButtonLink";
 import UnderlineAnimatedLink from "./UnderlineAnimatedLink";
 
 export default function HomeSection() {
-  const initialDelay = 0.25;
+  const initialDelay = 0.15;
   const nextDelay = 0.1;
   return (
     <section
@@ -46,7 +46,7 @@ export default function HomeSection() {
           className="max-w-[540px] text-slate"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: initialDelay + nextDelay * 3 }}
+          transition={{ duration: 0.5, delay: initialDelay + nextDelay * 2 }}
           viewport={{ once: true }}
         >
           I&apos;m a full-stack web developer and Python developer who loves to
@@ -57,6 +57,8 @@ export default function HomeSection() {
             href="https://godotengine.org/"
             target="_blank"
             rel="noreferrer"
+            className="underline md:no-underline"
+            lineClassName="hidden md:block"
           >
             Godot Engine.
           </UnderlineAnimatedLink>

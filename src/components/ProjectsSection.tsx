@@ -230,7 +230,7 @@ function ProjectCard({ data }: { data: ProjectDataType }) {
           <h2 className="font-mono text-base font-bold text-lightest-slate transition-all duration-300 group-hover:text-green">
             {data.title}
           </h2>
-          <p className="font-mono text-sm font-semibold text-slate/50">
+          <p className="font-mono text-sm font-semibold text-slate/70">
             {data.date}
           </p>
         </div>

@@ -75,6 +75,8 @@ export default function Footer() {
             href="https://github.com/mukund1606"
             target="_blank"
             rel="noreferrer"
+            className="underline"
+            lineClassName="hidden"
           >
             Mukund Mittal
           </UnderlineAnimatedLink>

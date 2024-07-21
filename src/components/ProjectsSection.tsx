@@ -112,6 +112,7 @@ function FeaturedProjectCard({
               src={image}
               alt={data.title}
               className="aspect-[16/10] h-full w-full rounded-md object-cover brightness-[.25] transition-all duration-300 hover:scale-105 md:brightness-100"
+              sizes="(max-width: 768px) 100vw, 600px"
               width={600}
               height={375}
             />

@@ -1,6 +1,7 @@
 import StartAnimation from "@/components/StartAnimation";
 import "@/styles/globals.css";
 
+import { Analytics } from "@vercel/analytics/react";
 import { type Metadata } from "next";
 import dynamic from "next/dynamic";
 
@@ -95,6 +96,7 @@ export default function RootLayout({
         {children}
         <StartAnimation isDisabled={process.env.NODE_ENV === "development"} />
         <CursorShadow />
+        <Analytics />
       </body>
     </html>
   );

@@ -7,6 +7,7 @@ export const projectsData: ProjectDataType[] = [
     images: ["/projects/ssa-2.png"],
     isFeatured: true,
     techStack: ["React", "Next.js", "MySQL"],
+    youtubeVideo: "https://www.youtube.com/watch?v=MCCSIdB3Zpw",
   },
   {
     title: "Lo-Fi nance Band",

@@ -79,8 +79,6 @@ export default function AboutSection() {
               >
                 Tailwind CSS
               </UnderlineAnimatedLink>
-              . My main focus these days is on expanding my skills and learning
-              new things every day.
             </motion.p>
             <motion.p
               className="max-w-[540px] text-slate"
@@ -92,15 +90,9 @@ export default function AboutSection() {
               }}
               viewport={{ once: true }}
             >
-              Recently, I started learning about game development and have begun
-              my journey into the world of game development with the{" "}
-              <UnderlineAnimatedLink
-                href="https://godotengine.org/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Godot Engine.
-              </UnderlineAnimatedLink>
+              I have a keen interest in exploring web technologies and machine
+              learning and I am focused on continuous learning and creating
+              practical, efficient projects.
             </motion.p>
           </div>
           <motion.div

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import AnimatedButtonLink from "./AnimatedButtonLink";
-import UnderlineAnimatedLink from "./UnderlineAnimatedLink";
 
 export default function HomeSection() {
   const initialDelay = 0.15;
@@ -51,17 +50,7 @@ export default function HomeSection() {
         >
           I&apos;m a full-stack web developer and Python developer who loves to
           build things for the web. I enjoy learning new things and
-          experimenting with them. Currently, I&apos;m diving into Game
-          Development using the{" "}
-          <UnderlineAnimatedLink
-            href="https://godotengine.org/"
-            target="_blank"
-            rel="noreferrer"
-            className="underline md:no-underline"
-            lineClassName="hidden md:block"
-          >
-            Godot Engine.
-          </UnderlineAnimatedLink>
+          experimenting with them.
         </motion.p>
         <motion.div
           className="w-fit rounded-md bg-green"
